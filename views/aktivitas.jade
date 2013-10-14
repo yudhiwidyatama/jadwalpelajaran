@@ -1,0 +1,17 @@
+extends layout
+
+block content
+   h1 Aktivitas
+   table.t1
+      thead
+         tr
+            th kode
+            th nama
+      tbody
+         each aktivitas in listAktivitas
+            tr
+               td
+                  span= aktivitas.id
+               td
+                  span= aktivitas.nama
+

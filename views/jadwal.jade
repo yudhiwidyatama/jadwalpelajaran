@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  table
+     thead
+        tr
+           th Hari
+           th No
+           th Waktu
+           th Pelajaran
+     tbody
+        each jadwal in listJadwal
+           - jadwal.acceptTime(timeStruct)
+           tr
+              td
+                 span= jadwal.hari.nama
+              td
+                 span= jadwal.seqno
+              td
+                 span= timeStruct.asString()
+              td
+                 span= jadwal.aktivita.nama
